@@ -1,6 +1,5 @@
 {
   "name": "mantine-responsive-values",
-  "version": "0.1.0",
   "description": "Responsive values for styles in mantine.dev",
   "main": "index.ts",
   "scripts": {
