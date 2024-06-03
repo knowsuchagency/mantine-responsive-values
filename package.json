@@ -1,0 +1,25 @@
+{
+  "name": "mantine-responsive-values",
+  "version": "0.1.0",
+  "description": "Responsive values for styles in mantine.dev",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://knowsuchagency.com/mantine-responsive-values"
+  },
+  "keywords": [
+    "mantine",
+    "react",
+    "web",
+    "design"
+  ],
+  "author": "Stephan Fitzpatrick (knowsuchagency@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "@mantine/core": "^7.10.1",
+    "@mantine/hooks": "^7.10.1"
+  }
+}
