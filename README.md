@@ -4,10 +4,8 @@ A simple utility for applying responsive values to component props based on brea
 
 ## Installation
 
-Install the package using npm:
-
 ```bash
-npm install ...
+npx jsr add @knowsuchagency/mantine-responsive-values
 ```
 
 ### Usage
@@ -15,7 +13,7 @@ npm install ...
 ```tsx
 import React from 'react';
 import { Box, Text } from '@mantine/core';
-import responsive from '...';
+import responsive from "@knowsuchagency/mantine-responsive-values";
 
 const ResponsiveComponent: React.FC = () => {
   return (
