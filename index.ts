@@ -43,7 +43,7 @@ const MantineThemeContext = React.createContext(defaultTheme);
  * @param {Object} theme - An optional theme object with custom breakpoints.
  * @returns {T} - The responsive value based on the current screen size or the default value if no matching responsive value is found.
  */
-function useResponsive<T>(
+export function useResponsive<T>(
   defaultValue: T,
   values: ResponsiveValues<T>,
   theme?: { breakpoints: Breakpoints }
@@ -72,5 +72,3 @@ function useResponsive<T>(
     return defaultValue;
   }, [defaultValue, values, xl, lg, md, sm, xs]);
 }
-
-export default useResponsive;
