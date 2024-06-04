@@ -18,7 +18,6 @@
   "author": "Stephan Fitzpatrick (knowsuchagency@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@mantine/core": "^7.10.1",
     "@mantine/hooks": "^7.10.1"
   }
 }

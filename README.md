@@ -8,7 +8,7 @@ A simple utility for applying responsive values to component props based on brea
 npx jsr add @knowsuchagency/mantine-responsive-values
 ```
 
-### Usage
+## Usage
 
 ```tsx
 import React from 'react';
@@ -31,11 +31,43 @@ const ResponsiveComponent: React.FC = () => {
 export default ResponsiveComponent;
 ```
 
+### Usage with Custom Breakpoints
+
+You can also provide a `theme` object with custom breakpoints to the `responsive` function. Here's an example:
+
+```tsx
+import React from 'react';
+import { Box, Text, useMantineTheme } from '@mantine/core';
+import responsive from "@knowsuchagency/mantine-responsive-values";
+
+
+const ResponsiveComponentWithCustomBreakpoints: React.FC = () => {
+  const theme = useMantineTheme();
+  return (
+    <Box
+      mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 }, { breakpoints: customBreakpoints })}
+      style={{ padding: responsive('10px', { xs: '3px', sm: '5px', md: '15px', lg: '20px', xl: '25px' }, theme) }}
+    >
+      <Text fz={responsive('lg', { xs: 'xs', sm: 'sm', md: 'md', lg: 'xl', xl: 'xxl' }, theme)}>
+        Responsive content goes here.
+      </Text>
+    </Box>
+  );
+};
+
+export default ResponsiveComponentWithCustomBreakpoints;
+```
 
 ### Parameters
 
 - `defaultValue`: The default value to use if no breakpoints match.
 - `values`: An object containing the values for different breakpoints. The keys should match the breakpoint names defined in the Mantine theme.
+- `theme`: An optional object containing custom breakpoints. If not provided, the function will use the following default breakpoints:
+  - `xs`: 36em (576px)
+  - `sm`: 48em (768px)
+  - `md`: 62em (992px)
+  - `lg`: 75em (1200px)
+  - `xl`: 88em (1408px)
 
 ### Example
 
@@ -49,23 +81,6 @@ const marginTop = responsive(15, {
 });
 ```
 
-## Types
-
-The `ResponsiveValues` interface defines the shape of the `values` object:
-
-```tsx
-interface ResponsiveValues<T> {
-  xs?: T;
-  sm?: T;
-  md?: T;
-  lg?: T;
-  xl?: T;
-}
-```
-
 ## License
 
 This project is licensed under the MIT License.
-```
-
-This README provides a clear explanation of how to install, use, and understand the `responsive` utility function, including TypeScript types and an example usage.
