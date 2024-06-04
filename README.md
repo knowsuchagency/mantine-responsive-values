@@ -11,7 +11,6 @@ npx jsr add @knowsuchagency/mantine-responsive-values
 ## Usage
 
 ```tsx
-import React from "react";
 import { Box, Text } from "@mantine/core";
 import useResponsive from "@knowsuchagency/mantine-responsive-values";
 
