@@ -11,37 +11,46 @@ npx jsr add @knowsuchagency/mantine-responsive-values
 ## Usage
 
 ```tsx
-import { Box, Text } from "@mantine/core";
+import { MantineProvider, Box, Text, Title, Button } from "@mantine/core";
 import { useResponsive as responsive } from "@knowsuchagency/mantine-responsive-values";
 
-function Component() {
+function HeroSection() {
   return (
     <Box
-      mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 })}
+      mt={responsive(20, { sm: 30, md: 50, lg: 60, xl: 80 })}
+      mb={responsive(30, { sm: 40, md: 70, lg: 80, xl: 100 })}
+      px={responsive(10, { sm: 15, md: 30, lg: 40, xl: 50 })}
       style={{
-        padding: responsive("10px", {
-          xs: "3px",
-          sm: "5px",
-          md: "15px",
-          lg: "20px",
-          xl: "25px",
-        }),
+        textAlign: responsive("center", { md: "left" }),
       }}
     >
-      <Text
-        fz={responsive("lg", {
-          xs: "xs",
-          sm: "sm",
-          md: "md",
-          lg: "xl",
-          xl: "xxl",
-        })}
+      <Title
+        order={1}
+        fz={responsive(24, { sm: 32, md: 40, lg: 56, xl: 64 })}
+        mb={responsive(10, { sm: 15, md: 25, lg: 30, xl: 35 })}
       >
-        Responsive content goes here.
+        Welcome to Our App
+      </Title>
+      <Text
+        fz={responsive(16, { sm: 18, md: 20, lg: 28, xl: 32 })}
+        mb={responsive(15, { sm: 20, md: 35, lg: 40, xl: 45 })}
+      >
+        Discover a new way to manage your tasks and boost your productivity.
       </Text>
+      <Button
+        size={responsive("sm", { md: "md", lg: "lg" })}
+        style={{
+          padding: responsive("8px 16px", {
+            md: "12px 24px",
+            lg: "16px 32px",
+          }),
+        }}
+      >
+        Get Started
+      </Button>
     </Box>
   );
-};
+}
 ```
 
 ### Parameters
