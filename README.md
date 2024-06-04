@@ -60,11 +60,7 @@ const ResponsiveComponentWithCustomBreakpoints: React.FC = () => {
   const theme = useMantineTheme();
   return (
     <Box
-      mt={responsive(
-        15,
-        { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 },
-        { breakpoints: customBreakpoints }
-      )}
+      mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 }, theme)}
       style={{
         padding: responsive(
           "10px",
