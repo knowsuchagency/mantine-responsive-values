@@ -11,17 +11,33 @@ npx jsr add @knowsuchagency/mantine-responsive-values
 ## Usage
 
 ```tsx
-import React from 'react';
-import { Box, Text } from '@mantine/core';
+import React from "react";
+import { Box, Text } from "@mantine/core";
 import responsive from "@knowsuchagency/mantine-responsive-values";
 
 const ResponsiveComponent: React.FC = () => {
   return (
     <Box
       mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 })}
-      style={{ padding: responsive('10px', { xs: '3px', sm: '5px', md: '15px', lg: '20px', xl: '25px' }) }}
+      style={{
+        padding: responsive("10px", {
+          xs: "3px",
+          sm: "5px",
+          md: "15px",
+          lg: "20px",
+          xl: "25px",
+        }),
+      }}
     >
-      <Text fz={responsive('lg', { xs: 'xs', sm: 'sm', md: 'md', lg: 'xl', xl: 'xxl' })}>
+      <Text
+        fz={responsive("lg", {
+          xs: "xs",
+          sm: "sm",
+          md: "md",
+          lg: "xl",
+          xl: "xxl",
+        })}
+      >
         Responsive content goes here.
       </Text>
     </Box>
@@ -36,19 +52,34 @@ export default ResponsiveComponent;
 You can also provide a `theme` object with custom breakpoints to the `responsive` function. Here's an example:
 
 ```tsx
-import React from 'react';
-import { Box, Text, useMantineTheme } from '@mantine/core';
+import React from "react";
+import { Box, Text, useMantineTheme } from "@mantine/core";
 import responsive from "@knowsuchagency/mantine-responsive-values";
-
 
 const ResponsiveComponentWithCustomBreakpoints: React.FC = () => {
   const theme = useMantineTheme();
   return (
     <Box
-      mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 }, { breakpoints: customBreakpoints })}
-      style={{ padding: responsive('10px', { xs: '3px', sm: '5px', md: '15px', lg: '20px', xl: '25px' }, theme) }}
+      mt={responsive(
+        15,
+        { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 },
+        { breakpoints: customBreakpoints }
+      )}
+      style={{
+        padding: responsive(
+          "10px",
+          { xs: "3px", sm: "5px", md: "15px", lg: "20px", xl: "25px" },
+          theme
+        ),
+      }}
     >
-      <Text fz={responsive('lg', { xs: 'xs', sm: 'sm', md: 'md', lg: 'xl', xl: 'xxl' }, theme)}>
+      <Text
+        fz={responsive(
+          "lg",
+          { xs: "xs", sm: "sm", md: "md", lg: "xl", xl: "xxl" },
+          theme
+        )}
+      >
         Responsive content goes here.
       </Text>
     </Box>
