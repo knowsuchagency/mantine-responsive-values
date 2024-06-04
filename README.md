@@ -12,14 +12,14 @@ npx jsr add @knowsuchagency/mantine-responsive-values
 
 ```tsx
 import { Box, Text } from "@mantine/core";
-import { useResponsive } from "@knowsuchagency/mantine-responsive-values";
+import { useResponsive as responsive } from "@knowsuchagency/mantine-responsive-values";
 
 function Component() {
   return (
     <Box
-      mt={useResponsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 })}
+      mt={responsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 })}
       style={{
-        padding: useResponsive("10px", {
+        padding: responsive("10px", {
           xs: "3px",
           sm: "5px",
           md: "15px",
@@ -29,7 +29,7 @@ function Component() {
       }}
     >
       <Text
-        fz={useResponsive("lg", {
+        fz={responsive("lg", {
           xs: "xs",
           sm: "sm",
           md: "md",
