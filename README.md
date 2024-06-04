@@ -13,7 +13,7 @@ npx jsr add @knowsuchagency/mantine-responsive-values
 ```tsx
 import React from "react";
 import { Box, Text } from "@mantine/core";
-import { useResponsive } from "@knowsuchagency/mantine-responsive-values";
+import useResponsive from "@knowsuchagency/mantine-responsive-values";
 
 const ResponsiveComponent: React.FC = () => {
   return (
