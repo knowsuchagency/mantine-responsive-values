@@ -32,6 +32,17 @@ const defaultTheme: MantineThemeOverride = {
 
 const MantineThemeContext = React.createContext(defaultTheme);
 
+/**
+ * This function is used to return responsive values based on the current screen size.
+ * It uses the useMediaQuery hook to determine the current screen size.
+ * It then checks the screen size and returns the corresponding value from the values object if it exists, otherwise it returns the default value.
+ * The function can take an optional theme object with custom breakpoints. If no theme object is provided, it uses the default breakpoints.
+ *
+ * @param {T} defaultValue - The default value to return if no matching responsive value is found.
+ * @param {ResponsiveValues<T>} values - An object containing values for different screen sizes.
+ * @param {Object} theme - An optional theme object with custom breakpoints.
+ * @returns {T} - The responsive value based on the current screen size or the default value if no matching responsive value is found.
+ */
 function useResponsive<T>(
   defaultValue: T,
   values: ResponsiveValues<T>,
