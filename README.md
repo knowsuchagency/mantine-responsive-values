@@ -15,7 +15,7 @@ import React from "react";
 import { Box, Text } from "@mantine/core";
 import useResponsive from "@knowsuchagency/mantine-responsive-values";
 
-const ResponsiveComponent: React.FC = () => {
+function Component() {
   return (
     <Box
       mt={useResponsive(15, { xs: 5, sm: 10, md: 20, lg: 30, xl: 40 })}
@@ -43,8 +43,6 @@ const ResponsiveComponent: React.FC = () => {
     </Box>
   );
 };
-
-export default ResponsiveComponent;
 ```
 
 ### Parameters
